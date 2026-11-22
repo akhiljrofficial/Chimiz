@@ -17,7 +17,10 @@ const SITE = {
     ["Monday – Saturday", "10 am – 7:30 pm"],
     ["Sunday", "By appointment"],
   ],
-  instagram: "https://instagram.com/",
+  instagram: "https://www.instagram.com/chimizh.antiques",
+  facebook: "https://www.facebook.com/share/1FdEuhbhpn/?mibextid=wwXIfr",
+  youtube: "https://youtube.com/@chimizh.antiques",
+  olx: "https://www.olx.in/profile/651628013",
 };
 
 /* SHOWCASE — illustrative images only.

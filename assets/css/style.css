@@ -922,6 +922,8 @@ html.is-loading, html.is-loading body { overflow: hidden; overscroll-behavior: n
 .footer h4 { font-family: var(--f-type); font-size: 0.78rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
 .footer p { font-size: 1.02rem; color: rgba(239, 226, 198, 0.75); margin: 0; }
 .footer a { text-decoration: none; }
+.footer-qr { display: flex; gap: 12px; margin-top: 14px; }
+.footer-qr img { width: 96px; height: auto; display: block; border-radius: 4px; }
 .footer a:hover { color: var(--gold); }
 .footer-base { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding-top: 22px; font-family: var(--f-type); font-size: 0.72rem; letter-spacing: 0.14em; color: rgba(239, 226, 198, 0.45); }
 @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; } }

@@ -36,6 +36,11 @@
   $("#ft-email").textContent = SITE.email;
   $("#ft-email").href = "mailto:" + SITE.email;
   $("#ft-ig").href = SITE.instagram;
+  $("#ft-ig-qr").href = SITE.instagram;
+  $("#ft-fb").href = SITE.facebook;
+  $("#ft-yt").href = SITE.youtube;
+  $("#ft-yt-qr").href = SITE.youtube;
+  $("#ft-olx").href = SITE.olx;
   $("#year").textContent = new Date().getFullYear();
   $("#letter-date").textContent = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
   if (new URLSearchParams(location.search).get("sent")) {
