@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chimizh Antiques: Keepers of Antique Vessels</title>
+  <meta name="description" content="Chimizh is an antique house devoted to heritage vessels in brass, copper, bell metal, pewter and clay. We collect, sell, appraise and restore. Visit our showroom in Chenthittai, Thiruvananthapuram.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // lock scrolling before anything paints; main.js restores the reader's place after the loader
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("is-loading");
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  </script>
+</head>
+<body>
+
+  <!-- ============ PRELOADER ============ -->
+  <!-- Loader: the name on aged paper, framed by antique ornaments; lifts like a curtain when ready -->
+  <div class="loader paper" id="loader" aria-hidden="true">
+    <div class="loader-frame">
+      <svg class="corner tl" viewBox="0 0 80 80"><use href="#corner"/></svg>
+      <svg class="corner tr" viewBox="0 0 80 80"><use href="#corner"/></svg>
+      <svg class="corner bl" viewBox="0 0 80 80"><use href="#corner"/></svg>
+      <svg class="corner br" viewBox="0 0 80 80"><use href="#corner"/></svg>
+    </div>
+    <div class="loader-center">
+      <div class="loader-vessels">
+        <img src="assets/img/cutouts/copper-water-ewer.png" alt="">
+        <img src="assets/img/cutouts/lotus-brass-bottle.png" alt="">
+        <img src="assets/img/cutouts/pewter-tea-pot.png" alt="">
+      </div>
+      <div class="loader-rule"><span>❦</span></div>
+      <div class="loader-name" id="loader-name"><span>C</span><span>h</span><span>i</span><span>m</span><span>i</span><span>z</span><span>h</span></div>
+      <div class="loader-script">Antiques</div>
+      <div class="loader-rule loader-rule--b"><span>✦</span></div>
+      <div class="loader-progress">
+        <div class="loader-line"><span id="loader-bar"></span></div>
+        <div class="loader-meta"><span>Antique vessels · Thiruvananthapuram</span><b id="loader-num">0%</b></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ CHROME ============ -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"></span></div>
+
+  <header class="nav" id="nav">
+    <a class="nav-brand" href="#top" aria-label="Chimizh home">
+      <!-- LOGO: replace these two spans with <img src="assets/img/logo.svg" alt="Chimizh"> -->
+      <span class="nav-name">Chimizh</span>
+      <span class="nav-sub">antiques · mmxxvi</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#story">Our Story</a>
+      <a href="#cabinet">The Cabinet</a>
+      <a href="#materials">Materials</a>
+      <a href="#services">Services</a>
+      <a href="#sell">Sell to Us</a>
+      <a href="#visit" class="nav-cta">Visit</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+  <div class="menu" id="menu">
+    <nav>
+      <a href="#story"><i>i.</i> Our Story</a>
+      <a href="#cabinet"><i>ii.</i> The Cabinet</a>
+      <a href="#materials"><i>iii.</i> Materials</a>
+      <a href="#services"><i>iv.</i> Services</a>
+      <a href="#sell"><i>v.</i> Sell to Us</a>
+      <a href="#visit"><i>vi.</i> Visit</a>
+    </nav>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-rays" aria-hidden="true"></div>
+      <div class="hero-frame" aria-hidden="true">
+        <svg class="corner tl" viewBox="0 0 80 80"><use href="#corner"/></svg>
+        <svg class="corner tr" viewBox="0 0 80 80"><use href="#corner"/></svg>
+        <svg class="corner bl" viewBox="0 0 80 80"><use href="#corner"/></svg>
+        <svg class="corner br" viewBox="0 0 80 80"><use href="#corner"/></svg>
+      </div>
+
+      <div class="hero-top">
+        <span>No. I</span>
+        <span class="hero-top-mid">✦ Purveyors of antique vessels ✦</span>
+        <span>Est. MMXXVI</span>
+      </div>
+
+      <!-- depth layers: data-depth = how strongly each layer follows the mouse -->
+      <div class="layer" data-depth="0.6"><h1 class="hero-title" aria-label="Chimizh"><span>C</span><span>h</span><span>i</span><span>m</span><span>i</span><span>z</span><span>h</span></h1></div>
+
+      <div class="layer" data-depth="-0.9"><img class="float f-far-l" src="assets/img/cutouts/brass-tea-pot.png" alt=""></div>
+      <div class="layer" data-depth="-0.7"><img class="float f-far-r" src="assets/img/cutouts/carved-terracotta-pot.png" alt=""></div>
+
+      <div class="hero-vessel">
+        <div class="vessel-shadow"></div>
+        <canvas id="vessel-canvas" aria-label="A rotating antique brass kalasham"></canvas>
+        <img class="vessel-fallback" src="assets/img/cutouts/lotus-brass-bottle.png" alt="">
+      </div>
+
+      <div class="layer" data-depth="2.2"><img class="float f-near-l" src="assets/img/cutouts/copper-water-ewer.png" alt=""></div>
+      <div class="layer" data-depth="2.6"><img class="float f-near-r" src="assets/img/cutouts/pewter-tea-pot.png" alt=""></div>
+
+      <canvas class="dust" id="dust" aria-hidden="true"></canvas>
+
+      <div class="hero-bottom">
+        <p class="hero-script">Keepers of</p>
+        <p class="hero-sub">Antique Vessels</p>
+        <p class="hero-line">brass · copper · bell metal · pewter · clay</p>
+      </div>
+      <a class="scroll-cue" href="#story" aria-label="Scroll down"><span>scroll</span><i></i></a>
+    </section>
+
+    <!-- ============ TICKER ============ -->
+    <section class="tickers" aria-hidden="true">
+      <div class="ticker ticker--a"><div class="ticker-track" data-dir="-1">
+        <span>Kindi</span><span>Kalasham</span><span>Aftaba</span><span>Uruli</span><span>Lota</span><span>Ibrik</span><span>Kalam</span><span>Para</span><span>Kindi</span><span>Kalasham</span><span>Aftaba</span><span>Uruli</span><span>Lota</span><span>Ibrik</span>
+      </div></div>
+      <div class="ticker ticker--b"><div class="ticker-track" data-dir="1">
+        <span>Collected</span><span>Appraised</span><span>Restored</span><span>Treasured</span><span>Collected</span><span>Appraised</span><span>Restored</span><span>Treasured</span><span>Collected</span><span>Appraised</span><span>Restored</span><span>Treasured</span>
+      </div></div>
+    </section>
+
+    <!-- ============ STORY ============ -->
+    <section class="story paper" id="story">
+      <div class="wrap story-grid">
+        <div class="story-text">
+          <div class="eyebrow"><span>i.</span> Our story</div>
+          <h2 class="split">Every dent is a <em>story</em></h2>
+          <p class="reveal-words">Long before steel and plastic, every home had its vessels: a brass kindi by the door, a copper pot for drinking water, a clay jar keeping things cool in the corner. They were made by hand, used every day and handed down through generations.</p>
+          <p class="reveal-words">Chimizh looks for these vessels in old homes, trading families and forgotten storerooms. We clean them gently without erasing their age, and find them homes where they will be noticed again.</p>
+          <div class="signature">
+            <span class="sig-script">The Chimizh House</span>
+            <span class="sig-line">keepers since mmxxvi</span>
+          </div>
+        </div>
+
+        <div class="story-visual">
+          <div class="oval-frame" data-speed="0.85">
+            <svg class="oval-ornament" viewBox="0 0 400 520" aria-hidden="true">
+              <ellipse cx="200" cy="260" rx="186" ry="246" />
+              <ellipse cx="200" cy="260" rx="172" ry="232" />
+              <ellipse cx="200" cy="260" rx="164" ry="224" stroke-dasharray="2 6" />
+              <path d="M200 0 l10 14 -10 14 -10 -14z M200 492 l10 14 -10 14 -10 -14z M0 260 l14 -10 14 10 -14 10z M372 260 l14 -10 14 10 -14 10z" class="fill" />
+            </svg>
+            <div class="oval-inner">
+              <img src="assets/img/cutouts/engraved-brass-ewer.png" alt="An engraved brass ewer">
+            </div>
+          </div>
+          <div class="note-card" data-speed="1.2">
+            <span class="tape"></span>
+            <p>“We keep the patina.<br>We keep the dents.<br>We keep the story.”</p>
+          </div>
+          <div class="seal seal--small" data-speed="1.35" aria-hidden="true"><span>C</span></div>
+        </div>
+      </div>
+      <div class="tear tear--dark" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ CABINET (horizontal 3D gallery) ============ -->
+    <section class="cabinet" id="cabinet">
+      <div class="cabinet-pin">
+        <div class="cabinet-head">
+          <div class="eyebrow eyebrow--gold"><span>ii.</span> The cabinet of forms</div>
+          <h2 class="split">Vessels of the kind <em>we keep</em></h2>
+          <p class="cabinet-note">Each form had its own job: pouring, holding, serving or storing.</p>
+        </div>
+        <div class="cabinet-track" id="cabinet-track"></div>
+        <div class="cabinet-foot">
+          <span class="cabinet-count"><b id="cab-i">01</b> / <span id="cab-n">08</span></span>
+          <span class="cabinet-disclaimer">Images are for illustration only.</span>
+        </div>
+      </div>
+      <div class="tear tear--paper" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ MATERIALS ============ -->
+    <section class="materials paper" id="materials">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow center"><span>iii.</span> Materials</div>
+          <h2 class="split">What old vessels are <em>made of</em></h2>
+        </div>
+      </div>
+      <div class="mat-rows">
+        <div class="mat-row" data-dir="1">
+          <div class="mat-word"><span class="outline">Brass</span><span class="fill">Brass</span></div>
+          <div class="mat-info wrap"><img src="assets/img/cutouts/lotus-brass-bottle.png" alt=""><p><b>Brass</b>, copper and zinc together, was the gold of the household: polished for festivals and passed down at weddings.</p></div>
+        </div>
+        <div class="mat-row" data-dir="-1">
+          <div class="mat-word"><span class="outline">Copper</span><span class="fill">Copper</span></div>
+          <div class="mat-info wrap right"><img src="assets/img/cutouts/copper-water-ewer.png" alt=""><p><b>Copper</b> was trusted to keep drinking water pure. It glows rose-gold, darkens with age, and was lined with tin for cooking.</p></div>
+        </div>
+        <div class="mat-row" data-dir="1">
+          <div class="mat-word"><span class="outline">Bell&nbsp;Metal</span><span class="fill">Bell&nbsp;Metal</span></div>
+          <div class="mat-info wrap"><img src="assets/img/cutouts/dragon-handle-brass-vase.png" alt=""><p><b>Bell metal</b>, a high-tin bronze, rings when struck. It was cast by hand into urulis, kindis and temple lamps.</p></div>
+        </div>
+        <div class="mat-row" data-dir="-1">
+          <div class="mat-word"><span class="outline">Terracotta</span><span class="fill">Terracotta</span></div>
+          <div class="mat-info wrap right"><img src="assets/img/cutouts/carved-terracotta-pot.png" alt=""><p><b>Terracotta</b>, fired river clay, kept water cool through the summer. It was carved and stamped by village potters.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="services paper paper--deep" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow center"><span>iv.</span> What we do</div>
+          <h2 class="split">At the <em>House</em> of Chimizh</h2>
+        </div>
+        <div class="tickets">
+          <article class="ticket">
+            <div class="ticket-no">No. 0001</div>
+            <div class="ticket-icon">❦</div>
+            <h3>We Collect</h3>
+            <p>We search old homes, estates and trading families for genuine antique vessels.</p>
+            <div class="ticket-stub">admit one · collector</div>
+          </article>
+          <article class="ticket">
+            <div class="ticket-no">No. 0002</div>
+            <div class="ticket-icon">✠</div>
+            <h3>We Sell</h3>
+            <p>Each piece is shown in our showroom with an honest note of its age and condition.</p>
+            <div class="ticket-stub">admit one · showroom</div>
+          </article>
+          <article class="ticket">
+            <div class="ticket-no">No. 0003</div>
+            <div class="ticket-icon">✧</div>
+            <h3>We Appraise</h3>
+            <p>Have something at home? We'll tell you what it is, with no obligation to sell.</p>
+            <div class="ticket-stub">admit one · appraisal</div>
+          </article>
+          <article class="ticket">
+            <div class="ticket-no">No. 0004</div>
+            <div class="ticket-icon">⚜</div>
+            <h3>We Restore</h3>
+            <p>Gentle cleaning and careful repair that keeps the patina and the history.</p>
+            <div class="ticket-stub">admit one · restoration</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUOTE + SEAL ============ -->
+    <section class="quote" id="quote">
+      <div class="seal seal--big" id="seal" aria-hidden="true"><span>C</span></div>
+      <blockquote class="split-words">We don't sell new things made to look old. We look after old things so they can be used again.</blockquote>
+      <cite>The Chimizh promise</cite>
+    </section>
+
+    <!-- ============ SELL ============ -->
+    <section class="sell paper" id="sell">
+      <div class="tear tear--top" aria-hidden="true"></div>
+      <div class="wrap sell-grid">
+        <div>
+          <div class="eyebrow"><span>v.</span> Sell to us</div>
+          <h2 class="split">Have an old piece <em>at home?</em></h2>
+          <p class="lede">We buy antique vessels in brass, copper, bell metal and clay. Send us a few photos and we'll tell you what it is. There's no obligation to sell.</p>
+          <ol class="steps">
+            <li><b>Send photos</b>: front, back, base and any marks.</li>
+            <li><b>We take a look</b> and reply within two working days.</li>
+            <li><b>Receive an offer</b> if it suits our collection.</li>
+          </ol>
+          <a class="btn btn--wa" data-wa="Hello Chimizh, I have an antique piece I'd like appraised.">Send photos on WhatsApp</a>
+        </div>
+
+        <!-- Netlify Forms handles this when hosted on Netlify -->
+        <form class="letter" name="appraisal" method="POST" data-netlify="true" enctype="multipart/form-data" action="index.html?sent=1#sell">
+          <input type="hidden" name="form-name" value="appraisal">
+          <div class="letter-head">
+            <span class="letter-brand">Chimizh</span>
+            <span class="letter-title">Request for Appraisal</span>
+            <span class="letter-date" id="letter-date"></span>
+          </div>
+          <label class="line"><span>Name</span><input name="name" required autocomplete="name"></label>
+          <label class="line"><span>Phone / WhatsApp</span><input name="phone" type="tel" required autocomplete="tel"></label>
+          <label class="line"><span>The piece</span><input name="piece" placeholder="e.g. brass kindi, about 25 cm"></label>
+          <label class="line line--area"><span>Its story</span><textarea name="story" rows="3" placeholder="Where did it come from? Any marks, dents or repairs?"></textarea></label>
+          <label class="line"><span>Photographs</span><input name="photos" type="file" accept="image/*" multiple></label>
+          <div class="letter-foot">
+            <button class="btn" type="submit">Post the letter</button>
+            <div class="stamp-mark" aria-hidden="true">appraisal<br><b>free</b></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ VISIT (postcard) ============ -->
+    <section class="visit paper paper--deep" id="visit">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow center"><span>vi.</span> Visit</div>
+          <h2 class="split">Come and see them <em>in person</em></h2>
+        </div>
+        <div class="postcard" id="postcard">
+          <div class="postcard-map">
+            <div id="map"></div>
+            <span class="postcard-caption">Greetings from</span>
+          </div>
+          <div class="postcard-back">
+            <div class="postage">
+              <div class="postage-stamp"><img src="assets/img/cutouts/lotus-brass-bottle.png" alt=""><span>Chimizh</span></div>
+              <div class="postmark"><span>open daily</span></div>
+            </div>
+            <p class="pc-script">Dear visitor,</p>
+            <p class="pc-text">Antiques are best seen in person, where you can feel the weight of the metal and see how it catches the light. Do come by.</p>
+            <div class="pc-lines">
+              <div id="pc-address"></div>
+              <table id="pc-hours"></table>
+            </div>
+            <div class="pc-actions">
+              <a class="btn btn--wa" data-wa="Hello Chimizh, I'd like to visit the showroom.">WhatsApp</a>
+              <a class="btn btn--ghost" id="pc-dir" target="_blank" rel="noopener">Directions</a>
+              <a class="btn btn--ghost" data-tel>Call</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-orn" aria-hidden="true">✦ ❦ ✦</div>
+      <div class="footer-big" aria-hidden="true">Chimizh</div>
+      <div class="footer-grid">
+        <div><h4>Visit</h4><p id="ft-address"></p></div>
+        <div><h4>Contact</h4><p><a data-tel id="ft-phone"></a><br><a data-wa>WhatsApp</a><br><a id="ft-email"></a></p></div>
+        <div><h4>Follow</h4><p><a id="ft-ig" target="_blank" rel="noopener">Instagram</a></p></div>
+      </div>
+      <div class="footer-base">
+        <span>© <span id="year"></span> Chimizh Antiques</span>
+        <span>Showcase images are for illustration only.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" data-wa="Hello Chimizh, I have a question." aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.1 0 12 0 5.4 0 .1 5.4.1 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.6-8.3z"/></svg>
+  </a>
+
+  <!-- shared SVG symbols -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="corner" viewBox="0 0 80 80">
+      <path d="M4 76 V20 Q4 4 20 4 H76" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M12 76 V26 Q12 12 26 12 H76" fill="none" stroke="currentColor" stroke-width=".8"/>
+      <path d="M20 20 q10 2 12 12 q-10 -2 -12 -12z M24 4 q4 8 0 16 M4 24 q8 4 16 0" fill="none" stroke="currentColor" stroke-width="1"/>
+      <circle cx="20" cy="20" r="2.5" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <script src="assets/vendor/three.min.js"></script>
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/vessel3d.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
